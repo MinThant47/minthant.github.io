@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <title>YTU Electronics & Telecommunication</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<style>
+  
+</style>
+<body>
+
+   <section class="header grid">
+<div id="mySidebar" class="sidebar">
+    <a id="x" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">Home <span id="space"></span><i class="fas fa-home"></i></a>
+    <a href="#">About <span id="space"></span> <i class="fas fa-address-book"></i></a>
+    <a href="#">Contact <span id="space"></span> <i class="fas fa-phone"></i></a>
+    <a href="#">Login <span id="space"></span> <i class="fas fa-sign-in-alt"> <style>i{
+      font-size: 30px;
+    }</style></i></a>
+  </div>
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>  
+  </div>
+  <div class="title"><h1 class="head">YTU ecTEL</h1></div>
+</section>
+<section class="image grid">
+  <div class="img">
+    <img src="images/circuit.jpg" alt="" width="200px" height="300px">
+  </div>
+</section>
+<section class="leading para-grid">
+  <div class="para"><p id="new-ways">New ways</p></div>
+  <div class="para2"> <p id="approach"> to approach </p></div>
+  <div class="para3"> <p id="EC"> EC & Tele </p></div>
+  
+
+ 
+</section>
+
+<section class="button-grid">
+  <div class="explore">
+  <button class="button">Explore</button>
+</div>
+</section>
+
+<section>
+  <footer>
+    <div></div>
+  </footer>
+</section>
+
+
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "200px";
+    let main = document.getElementById("main");
+    main.style.marginLeft = "200px";
+
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    
+  }
+  </script>
+    
+</body>
+</html>
+
+
+   

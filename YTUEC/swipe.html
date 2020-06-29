@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="swipe.css">
+  <title>Document</title>
+</head>
+<style>
+  body {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  float: left;
+  background: #f3f3f3;
+  width: 30%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  display: flex;
+  background-position: left;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+
+}
+.swiper-slide img{
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+</style>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"> <a href="news-list.html"> <img src="images/event.PNG" alt=""> </a></div>
+      <div class="swiper-slide"> <img src="images/news.PNG" alt=""></div>
+      <div class="swiper-slide"> <img src="images/roll.PNG" alt=""></div>
+      <div class="swiper-slide"> <img src="images/sport.PNG" alt=""></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <span>Hello World! This is YTU Electronics students</span>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script type="text/javascript">
+  var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      // loop: true,
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 500,
+        modifier: 5,
+        slideShadows: true,
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable : true
+      },
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+:root{
+    --primary : #2F80ED;
+    --secondary : #FFFFFF;
+    --third : #DEF2C8;
+}
+
+/*  reset  */
+body,p,a,ul,li{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    
+}
+li{
+    list-style-type: none;
+  
+}
+
+/*   base styles   */
+
+body{
+    background: var(--secondary);
+    overflow-x: hidden;
+    font-family: 'Rubik';
+}
+
+.button {
+
+    font-size: 20px;
+    font-weight: 600;
+    background:  var(--secondary);
+    color: var(--primary);
+    
+    border: 1.4px solid var(--primary);
+    padding: 6px 15px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 3px rgba(0.5,0.5,0.5,0.2);
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.button:hover{
+    background:  var(--primary);
+    color: var(--secondary);
+    box-shadow: 8px 8px 8px rgba(0.5,0.5,0.5,0.2);
+    cursor: pointer;
+}
+
+input,textarea{
+    padding: 7px;
+    background: var(--primary);
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+}
+::placeholder{
+    color: var(--secondary);
+}
+
+
+
+/*   fonts   */
+
+
+@font-face{
+
+    font-family: 'Rubik';
+    src: url('fonts/Rubik-Regular.ttf');
+}
+
+h1,h2,h3{
+    color: var(--primary);
+    font-weight: normal;
+}
+
+p,a,li{
+    color: var(--primary);
+}
+
+h1{
+    font-size:1.8em;
+}
+h3{
+    font-size: 1.2em;
+}
+h2{
+    font-size: 1.6em;
+}
+
+h4{
+    font-size: 1.1em;
+}
+#main{
+    grid-column: 2/3;
+}
+.header{
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    align-items: center;
+}
+.header .title{
+    
+    grid-column: 5/11;
+}
+.header .title h1{
+    color: #fff;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: minmax(100px,auto);
+}
+.button-grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: minmax(60px,auto);
+}
+.para-grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: minmax(0px,auto);
+}
+
+  /* Side Bar here */
+
+  .sidebar {
+    
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #140D4F;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidebar #x{
+      border: none; 
+  }
+  .sidebar a {
+    border-bottom: 1px solid var(--secondary);
+   padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--secondary);
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar a:hover {
+      padding-left: 50px;
+    color: var(--third);
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .sidebar #space{
+      padding-right: 10px;
+  }
+  .openbtn {
+    font-size: 35px;
+    cursor: pointer;
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .openbtn:hover {
+    background-color:#4D9DE0;
+  }
+  
+  #main {
+
+    display: inline-block;
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+
+  .leading .para{
+        padding-top: 50px;
+      grid-column: 4/10;
+      grid-row: 2/3;
+      padding-bottom: 10px;
+    
+  }
+  
+  .leading .para2{
+
+    grid-column: 5/10;
+    grid-row: 3/4;
+    padding-bottom: 5px;
+  
+}
+.leading .para3{
+
+    grid-column: 5/10;
+    grid-row: 4/5;
+  
+}
+  .leading .para #new-ways{
+
+      font-weight: 500;
+      line-height: 35px;
+      font-size: 40px;
+      padding-top: 10px;
+  }
+  .leading .para2 #approach{
+      font-size: 25px;
+  }
+  .leading .para3 #EC{
+      padding-bottom: 12px;
+    font-size: 40px;
+}
+
+  .explore {
+      align-self: center;
+     grid-row: 1;
+    grid-column: 5/8;
+    padding-bottom:100px ;
+  }
+
+
+
+  .image .img{
+      grid-column: 5/7;
+      padding-top: 100px;
+  }
+  .image .img img{
+      border-radius: 30px;
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+   /* Side Bar end here */
+
+
+@media screen and (min-width: 620px){
+
+}
+
+/*   large tablet and laptop styles   */
+
+@media screen and (min-width: 960px){
+    body{
+        font-size: 18px;
+    }
+}
+
+/*   desktop styles   */
+
+@media screen and (min-width: 1200px){
+    body{
+        font-size: 20px;
+    }
+    
+}
